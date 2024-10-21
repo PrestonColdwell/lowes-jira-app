@@ -1,12 +1,12 @@
-import React from 'react';
-import './Column.css';
-import Task from '../task/Task';
+import React from "react";
+import "./Column.css";
+import Task from "../task/Task";
 
 function Column({ status, tasks, editTask }) {
   return (
     <div className="column">
-      <h3>{status}</h3>
-      {tasks.map(task => (
+      <h3 style={{ textDecoration: "underline" }}>{status}</h3>
+      {tasks.map((task) => (
         <Task key={task.id} task={task} onEdit={editTask} />
       ))}
     </div>

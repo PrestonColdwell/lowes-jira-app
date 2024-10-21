@@ -1,0 +1,68 @@
+export const initialTasks = [
+  {
+    id: 1,
+    name: "Phone Screening (Round 1)",
+    description: "Complete the phone screening with Lowe's recruiter, James",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
+  },
+  {
+    id: 2,
+    name: "Prep for Technical Discussion",
+    description: "Complete technical discussion with Gopal",
+    assignee: "Preston",
+    status: "Done",
+    priority: "Medium",
+  },
+  {
+    id: 3,
+    name: "Technical Discussion (Round 2)",
+    description: "Complete technical discussion with Gopal",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
+  },
+  {
+    id: 4,
+    name: "Prep for Technical Interview (Coding w/ React)",
+    description: "Review React concepts and prepare for coding interview",
+    assignee: "Preston",
+    status: "Done",
+    priority: "Medium",
+  },
+  {
+    id: 5,
+    name: "Technical Interview (Round 3)",
+    description: "Complete technical interview with Pushpak",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
+  },
+  {
+    id: 6,
+    name: "Iterate on Jira Mock Application",
+    description:
+      "Implement proper functionality and styling for mock application",
+    assignee: "Preston",
+    status: "In Progress",
+    priority: "Low",
+  },
+  {
+    id: 7,
+    name: "Prepare for Possible Additional Interviews",
+    description: "Prepare for possible additional interviews with Lowe's",
+    assignee: "Preston",
+    status: "To Do",
+    priority: "Medium",
+  },
+  {
+    id: 8,
+    name: "Hopefully Receive an Offer!",
+    description:
+      "Hope that the preparation, successful interviews and passion towards Lowe's will land me the position. ",
+    assignee: "Preston",
+    status: "To Do",
+    priority: "High",
+  },
+];

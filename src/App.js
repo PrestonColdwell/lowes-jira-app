@@ -6,12 +6,19 @@ import Button from "./components/button/Button";
 import { initialTasks } from "./initialTaskValues";
 import { useSelector, useDispatch } from "react-redux";
 import { createTask, updateTask, deleteTask } from "./store/tasksSlice";
+import { useTheme } from "./theme/ThemeContext";
 
 const statuses = ["To Do", "In Progress", "Done"];
 
 function App() {
+  // Theme Context
+  const { theme, toggleTheme } = useTheme();
+
+  // Task State
   const tasks = useSelector((state) => state.tasks);
   const [selectedTask, setSelectedTask] = useState(null);
+
+  // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const dispatch = useDispatch();
@@ -56,6 +63,9 @@ function App() {
             alt="Jira Logo"
             style={{ width: "100px" }}
           />
+          <button className="toggle-theme-button" onClick={toggleTheme}>
+            {theme === "light" ? "🌙" : "☀️"}
+          </button>
         </div>
         <Button
           label="+ Create New Task"

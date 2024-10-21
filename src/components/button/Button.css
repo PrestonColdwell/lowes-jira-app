@@ -8,29 +8,29 @@
 }
 
 .custom-button.default {
-  background-color: #5c9dff;
-  color: white;
+  background-color: var(--button-default-background-color, #5c9dff);
+  color: var(--button-default-color, white);
 }
 
 .custom-button.default:hover {
-  background-color: #4b8ae4;
+  background-color: var(--button-default-hover-background-color, #4b8ae4);
 }
 
 .custom-button.error {
-  background-color: #b22222;
-  color: white;
+  background-color: var(--button-error-background-color, #b22222);
+  color: var(--button-error-color, white);
 }
 
 .custom-button.error:hover {
-  background-color: #8b0000;
+  background-color: var(--button-error-hover-background-color, #8b0000);
 }
 
 .custom-button.transparent {
   background-color: transparent;
-  border: 1px solid #5c9dff;
-  color: #5c9dff;
+  border: 1px solid var(--button-transparent-border-color, #5c9dff);
+  color: var(--button-transparent-color, #5c9dff);
 }
 
 .custom-button.transparent:hover {
-  background-color: rgba(92, 157, 255, 0.1);
+  background-color: var(--button-transparent-hover-background-color, rgba(92, 157, 255, 0.1));
 }

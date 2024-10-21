@@ -1,23 +1,104 @@
+:root {
+  --background-color: white;
+  --text-color: black;
+  --header-background-color: #f9f9f9;
+  --header-border-color: #ccc;
+  --column-border-color: #ccc;
+  --column-background-color: #f4f4f4;
+  --task-background-color: #f9f9f9;
+  --task-border-color: #ddd;
+  --priority-bubble-color: black;
+  --button-default-background-color: #5c9dff;
+  --button-default-color: white;
+  --button-default-hover-background-color: #4b8ae4;
+  --button-error-background-color: #b22222;
+  --button-error-color: white;
+  --button-error-hover-background-color: #8b0000;
+  --button-transparent-border-color: #5c9dff;
+  --button-transparent-color: #5c9dff;
+  --button-transparent-hover-background-color: rgba(92, 157, 255, 0.1);
+  --modal-background-color: white;
+  --close-modal-btn-background-color: red;
+  --close-modal-btn-color: white;
+  --input-border-color: #ccc;
+  --input-background-color: white;
+  --input-text-color: black;
+  --button-background-color: blue;
+  --button-color: white;
+  --trashcan-icon-color: #b22222;
+  --trashcan-icon-hover-color: #8b0000;
+}
+
+body.dark {
+  --background-color: black;
+  --text-color: white;
+  --header-background-color: #6D6D6D;
+  --header-border-color: #555;
+  --column-border-color: #555;
+  --column-background-color: #333;
+  --task-background-color: #444;
+  --task-border-color: #666;
+  --priority-bubble-color: white;
+  --button-default-background-color: #3a7bd5;
+  --button-default-color: white;
+  --button-default-hover-background-color: #2e6bb2;
+  --button-error-background-color: #8b0000;
+  --button-error-color: white;
+  --button-error-hover-background-color: #5a0000;
+  --button-transparent-border-color: #3a7bd5;
+  --button-transparent-color: #3a7bd5;
+  --button-transparent-hover-background-color: rgba(58, 123, 213, 0.1);
+  --modal-background-color: #444;
+  --close-modal-btn-background-color: #8b0000;
+  --close-modal-btn-color: white;
+  --input-border-color: #666;
+  --input-background-color: #555;
+  --input-text-color: white;
+  --button-background-color: #3a7bd5;
+  --button-color: white;
+  --trashcan-icon-color: #8b0000;
+  --trashcan-icon-hover-color: #5a0000;
+}
+
 .App {
   text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .header {
   width: 100%;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #ccc;
-  padding: 20px 0px;
+  background-color: var(--header-background-color);
+  border-bottom: 1px solid var(--header-border-color);
+  padding: 20px 20px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .header h2 {
   margin: 0;
   font-weight: 200;
+}
+
+.toggle-theme-button {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  color: var(--text-color);
+  background-color: var(--column-background-color);
+  border: 1px solid var(--column-border-color);
+  cursor: pointer;
+  font-size: 26px;
 }
 
 .board {
@@ -31,16 +112,16 @@
 }
 
 .column {
-  border: 1px solid #ccc;
+  border: 1px solid var(--column-border-color);
   padding: 20px;
   width: 30%;
 }
 
 .task {
-  background-color: #f9f9f9;
+  background-color: var(--task-background-color);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--task-border-color);
 }
 
 /* Avoid scrolling when modal is open */

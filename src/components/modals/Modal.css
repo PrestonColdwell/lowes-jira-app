@@ -13,19 +13,18 @@
 
 .modal {
   position: relative;
-  background-color: white;
+  background-color: var(--modal-background-color, white);
   padding: 20px;
   border-radius: 8px;
   width: 400px;
   max-width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 .close-modal-btn {
   margin-top: 10px;
-  background-color: red;
-  color: white;
+  background-color: var(--close-modal-btn-background-color, red);
+  color: var(--close-modal-btn-color, white);
   padding: 5px 10px;
   border: none;
   cursor: pointer;
@@ -38,10 +37,12 @@ select {
   width: 100%;
   margin-bottom: 10px;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border-color, #ccc);
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 16px;
+  background-color: var(--input-background-color, white);
+  color: var(--input-text-color, black);
 }
 
 input {
@@ -51,8 +52,8 @@ input {
 
 button {
   padding: 10px 15px;
-  background-color: blue;
-  color: white;
+  background-color: var(--button-background-color, blue);
+  color: var(--button-color, white);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -76,11 +77,11 @@ button {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  color: #b22222;
+  color: var(--trashcan-icon-color, #b22222);
   width: 24px;
   height: 24px;
 }
 
 .trashcan-icon:hover {
-  color: #8b0000;
+  color: var(--trashcan-icon-hover-color, #8b0000);
 }

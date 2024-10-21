@@ -1,0 +1,36 @@
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-button.default {
+  background-color: #5c9dff;
+  color: white;
+}
+
+.custom-button.default:hover {
+  background-color: #4b8ae4;
+}
+
+.custom-button.error {
+  background-color: #b22222;
+  color: white;
+}
+
+.custom-button.error:hover {
+  background-color: #8b0000;
+}
+
+.custom-button.transparent {
+  background-color: transparent;
+  border: 1px solid #5c9dff;
+  color: #5c9dff;
+}
+
+.custom-button.transparent:hover {
+  background-color: rgba(92, 157, 255, 0.1);
+}

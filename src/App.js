@@ -4,28 +4,30 @@ import TaskFormModal from "./components/modals/TaskFormModal";
 import "./App.css";
 import Button from "./components/button/Button";
 import { initialTasks } from "./initialTaskValues";
+import { useSelector, useDispatch } from "react-redux";
+import { createTask, updateTask, deleteTask } from "./store/tasksSlice";
 
 const statuses = ["To Do", "In Progress", "Done"];
 
 function App() {
-  const [tasks, setTasks] = useState(initialTasks);
+  const tasks = useSelector((state) => state.tasks);
   const [selectedTask, setSelectedTask] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const createTask = (task) => {
-    setTasks([...tasks, { ...task, id: tasks.length + 1 }]);
+  const dispatch = useDispatch();
+
+  const handleCreateTask = (task) => {
+    dispatch(createTask(task));
     setIsModalOpen(false);
   };
 
-  const updateTask = (updatedTask) => {
-    setTasks(
-      tasks.map((task) => (task.id === updatedTask.id ? updatedTask : task))
-    );
+  const handleUpdateTask = (updatedTask) => {
+    dispatch(updateTask(updatedTask));
     setIsModalOpen(false);
   };
 
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
+  const handleDeleteTask = (id) => {
+    dispatch(deleteTask(id));
     setIsModalOpen(false);
   };
 
@@ -80,9 +82,9 @@ function App() {
 
       {isModalOpen && (
         <TaskFormModal
-          createTask={createTask}
-          updateTask={updateTask}
-          deleteTask={deleteTask} // Move delete functionality to the modal
+          createTask={handleCreateTask}
+          updateTask={handleUpdateTask}
+          deleteTask={handleDeleteTask} // Move delete functionality to the modal
           selectedTask={selectedTask}
           closeModal={() => setIsModalOpen(false)}
         />

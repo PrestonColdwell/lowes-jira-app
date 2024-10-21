@@ -1,28 +1,78 @@
-import React, { useState } from 'react';
-import Column from './Column';
-import TaskFormModal from './TaskFormModal';
-import './App.css';
+import React, { useState } from "react";
+import Column from "./Column";
+import TaskFormModal from "./TaskFormModal";
+import "./App.css";
 
 const initialTasks = [
   {
     id: 1,
-    name: 'Task 1',
-    description: 'Complete the project setup',
-    assignee: 'Alice',
-    status: 'To Do',
-    priority: 'High',
+    name: "Interview Round 1",
+    description: "Complete the phone screening with Lowe's recruiter",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
   },
   {
     id: 2,
-    name: 'Task 2',
-    description: 'Design the main UI',
-    assignee: 'Bob',
-    status: 'In Progress',
-    priority: 'Medium',
+    name: "Prep for Technical Discussion",
+    description: "Complete technical discussion with Gopal",
+    assignee: "Preston",
+    status: "Done",
+    priority: "Medium",
+  },
+  {
+    id: 3,
+    name: "Interview Round 2",
+    description: "Complete technical discussion with Gopal",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
+  },
+  {
+    id: 4,
+    name: "Prep for Technical Interview (Coding w/ React)",
+    description: "Review React concepts and prepare for coding interview",
+    assignee: "Preston",
+    status: "Done",
+    priority: "Medium",
+  },
+  {
+    id: 5,
+    name: "Technical Interview",
+    description: "Complete technical interview with Pushpak",
+    assignee: "Preston",
+    status: "Done",
+    priority: "High",
+  },
+  {
+    id: 6,
+    name: "Iterate on Jira Mock Application",
+    description:
+      "Implement proper functionality and styling for mock application",
+    assignee: "Preston",
+    status: "In Progress",
+    priority: "Low",
+  },
+  {
+    id: 7,
+    name: "Prepare for Possible Additional Interviews",
+    description: "Prepare for possible additional interviews with Lowe's",
+    assignee: "Preston",
+    status: "To Do",
+    priority: "Medium",
+  },
+  {
+    id: 8,
+    name: "Hopefully Get the Job",
+    description:
+      "Hope that the preparation, successful interviews and passion towards Lowe's will land me the job",
+    assignee: "Preston",
+    status: "To Do",
+    priority: "High",
   },
 ];
 
-const statuses = ['To Do', 'In Progress', 'Done'];
+const statuses = ["To Do", "In Progress", "Done"];
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
@@ -35,12 +85,14 @@ function App() {
   };
 
   const updateTask = (updatedTask) => {
-    setTasks(tasks.map(task => task.id === updatedTask.id ? updatedTask : task));
+    setTasks(
+      tasks.map((task) => (task.id === updatedTask.id ? updatedTask : task))
+    );
     setIsModalOpen(false);
   };
 
   const deleteTask = (id) => {
-    setTasks(tasks.filter(task => task.id !== id));
+    setTasks(tasks.filter((task) => task.id !== id));
     setIsModalOpen(false);
   };
 
@@ -56,15 +108,17 @@ function App() {
 
   return (
     <div className="App">
-      <div className={`content ${isModalOpen ? 'blur-background' : ''}`}>
+      <div className={`content ${isModalOpen ? "blur-background" : ""}`}>
         <h1>Jira Mock Application</h1>
-        <button onClick={openCreateTaskModal} className="create-task-btn">+ Create New Task</button>
+        <button onClick={openCreateTaskModal} className="create-task-btn">
+          + Create New Task
+        </button>
         <div className="board">
-          {statuses.map(status => (
+          {statuses.map((status) => (
             <Column
               key={status}
               status={status}
-              tasks={tasks.filter(task => task.status === status)}
+              tasks={tasks.filter((task) => task.status === status)}
               editTask={editTask}
             />
           ))}

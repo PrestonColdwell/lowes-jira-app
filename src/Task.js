@@ -9,8 +9,8 @@ function Task({ task, onEdit }) {
   };
 
   return (
-    <div className="task-container">
-      <div className="task-details" onClick={() => onEdit(task)}>
+    <div className="task-container" onClick={() => onEdit(task)}>
+      <div className="task-details">
         <h3>{task.name}</h3>
         {task.description ? (
           <p>{task.description}</p>

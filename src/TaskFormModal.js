@@ -128,14 +128,20 @@ function TaskFormModal({
               <option value="Done">Done</option>
             </select>
 
-            <Button
-              label={selectedTask ? "Update Task" : "Create Task"}
-              color="default"
-              type="submit"
-            />
+            <div className="modal-actions">
+              <Button
+                label={selectedTask ? "Update Task" : "Create Task"}
+                color="default"
+                type="submit"
+              />
+              <Button
+                label="Close"
+                color="transparent"
+                type="button"
+                onClick={closeModal}
+              />
+            </div>
           </form>
-
-          <Button label="Close" color="transparent" onClick={closeModal} />
         </div>
       </div>
 

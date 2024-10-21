@@ -62,17 +62,12 @@ button {
 }
 
 .modal-actions {
+  width: fit-content;
   display: flex;
-  justify-content: space-between;
   margin-top: 20px;
-}
-
-.modal .custom-button {
-  margin-right: 10px;
-}
-
-.modal .custom-button:last-child {
-  margin-right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 10px;
 }
 
 .trashcan-icon {
@@ -87,18 +82,4 @@ button {
 
 .trashcan-icon:hover {
   color: #8b0000;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.modal .custom-button {
-  margin-right: 10px;
-}
-
-.modal .custom-button:last-child {
-  margin-right: 0;
 }

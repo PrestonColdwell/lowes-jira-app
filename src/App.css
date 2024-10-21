@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-  max-width: 2000px;
-  margin: 0 auto;
-  overflow: hidden;
 }
 
 .header {
@@ -28,6 +25,9 @@
   justify-content: space-around;
   margin: 20px;
   gap: 20px;
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .column {

@@ -60,7 +60,7 @@ export const initialTasks = [
     id: 8,
     name: "Hopefully Receive an Offer!",
     description:
-      "Hope that the preparation, successful interviews and passion towards Lowe's will land me the position. ",
+      "Hope that the successful interviews, my passion for ReactJS, this super cool Lowe's/Jira app, and my even stronger passion towards Lowe's as a company will afford me the position.",
     assignee: "Preston",
     status: "To Do",
     priority: "High",

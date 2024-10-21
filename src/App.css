@@ -45,8 +45,8 @@ body.dark {
   --button-error-background-color: #8b0000;
   --button-error-color: white;
   --button-error-hover-background-color: #5a0000;
-  --button-transparent-border-color: #3a7bd5;
-  --button-transparent-color: #3a7bd5;
+  --button-transparent-border-color: white;
+  --button-transparent-color: white;
   --button-transparent-hover-background-color: rgba(58, 123, 213, 0.1);
   --modal-background-color: #444;
   --close-modal-btn-background-color: #8b0000;

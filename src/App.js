@@ -7,8 +7,8 @@ import Button from "./Button";
 const initialTasks = [
   {
     id: 1,
-    name: "Interview Round 1",
-    description: "Complete the phone screening with Lowe's recruiter",
+    name: "Phone Screening (Round 1)",
+    description: "Complete the phone screening with Lowe's recruiter, James",
     assignee: "Preston",
     status: "Done",
     priority: "High",
@@ -23,7 +23,7 @@ const initialTasks = [
   },
   {
     id: 3,
-    name: "Interview Round 2",
+    name: "Technical Discussion (Round 2)",
     description: "Complete technical discussion with Gopal",
     assignee: "Preston",
     status: "Done",
@@ -39,7 +39,7 @@ const initialTasks = [
   },
   {
     id: 5,
-    name: "Technical Interview",
+    name: "Technical Interview (Round 3)",
     description: "Complete technical interview with Pushpak",
     assignee: "Preston",
     status: "Done",
@@ -64,9 +64,9 @@ const initialTasks = [
   },
   {
     id: 8,
-    name: "Hopefully Get the Job",
+    name: "Hopefully Receive an Offer!",
     description:
-      "Hope that the preparation, successful interviews and passion towards Lowe's will land me the job",
+      "Hope that the preparation, successful interviews and passion towards Lowe's will land me the position. ",
     assignee: "Preston",
     status: "To Do",
     priority: "High",
@@ -128,7 +128,11 @@ function App() {
           color="default"
           type="button"
           onClick={openCreateTaskModal}
-          style={{ padding: "10px 60px", marginBottom: "20px", fontSize: "1.2rem" }}
+          style={{
+            padding: "10px 60px",
+            marginBottom: "20px",
+            fontSize: "1.2rem",
+          }}
         />
         <div className="board">
           {statuses.map((status) => (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Modal.css";
-import Button from "./Button";
+import Button from "../button/Button";
 
 function ConfirmationModal({ onConfirm, onCancel }) {
   return (

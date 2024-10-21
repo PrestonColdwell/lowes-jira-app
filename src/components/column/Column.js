@@ -1,6 +1,6 @@
 import React from 'react';
 import './Column.css';
-import Task from './Task';
+import Task from '../task/Task';
 
 function Column({ status, tasks, editTask }) {
   return (

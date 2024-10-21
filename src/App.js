@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Column from "./Column";
-import TaskFormModal from "./TaskFormModal";
+import Column from "./components/column/Column";
+import TaskFormModal from "./components/modals/TaskFormModal";
 import "./App.css";
-import Button from "./Button";
+import Button from "./components/button/Button";
 
 const initialTasks = [
   {

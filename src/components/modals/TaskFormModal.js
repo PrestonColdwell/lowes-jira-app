@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Modal.css";
-import Button from "./Button";
+import Button from "../button/Button";
 import ConfirmationModal from "./ConfirmationModal";
 
 function TaskFormModal({

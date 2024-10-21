@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Column from "./Column";
 import TaskFormModal from "./TaskFormModal";
 import "./App.css";
+import Button from "./Button";
 
 const initialTasks = [
   {
@@ -109,10 +110,26 @@ function App() {
   return (
     <div className="App">
       <div className={`content ${isModalOpen ? "blur-background" : ""}`}>
-        <h1>Jira Mock Application</h1>
-        <button onClick={openCreateTaskModal} className="create-task-btn">
-          + Create New Task
-        </button>
+        <div className="header">
+          <img
+            src="/lowes-logo.png"
+            alt="Lowes Logo"
+            style={{ width: "100px" }}
+          />
+          <h2>X</h2>
+          <img
+            src="/jira-logo.png"
+            alt="Jira Logo"
+            style={{ width: "100px" }}
+          />
+        </div>
+        <Button
+          label="+ Create New Task"
+          color="default"
+          type="button"
+          onClick={openCreateTaskModal}
+          style={{ padding: "10px 60px", marginBottom: "20px", fontSize: "1.2rem" }}
+        />
         <div className="board">
           {statuses.map((status) => (
             <Column

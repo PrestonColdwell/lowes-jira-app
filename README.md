@@ -1,6 +1,6 @@
 # Iteration for Lowe's Technical Interview
 
-I wanted to continue the challenge of creating a roughly mocked Jira task board. Please share any feedback you may have!
+I wanted to continue the challenge of creating the roughly mocked Jira task board. It isnt anything crazy fancy but just wanted to make the necessary adjustments to be fully functional and meet the necessary requirements! Thank you.
 
 ## Available Scripts
 
